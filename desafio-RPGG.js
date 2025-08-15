@@ -237,17 +237,17 @@ console.log("🚪 Sala " + (i + 1) + ": " + salasCastelo[i]);
 // Lógica diferente para cada sala baseada no índice
 if (i === 0) {
 console.log("📚 encontro pergaminhos antigos!");
-experiencia += 50;
+xp += 50;
 } else if (i === 1) {
 console.log("💎 Cristais brilhantes concedem um poder mágico inemaginável!");
 tesouroColetado.push("Cristal de Poder");
 } else {
 console.log("⏰ O tempo muda ao redor de de mim!");
-vidaAtual -= 10; // Pequeno dano temporal
+vida -= 10; // Pequeno dano temporal
 }
 }
 
-console.log("📊 Exploração completa! XP: " + experiencia + " | Vida: " + vidaAtual);
+console.log("📊 Exploração completa! XP: " + xp + " | Vida: " + vida);
 
 // === CAPÍTULO 3: A UNIÃO DOS ALIADOS ===
 console.log("");
@@ -269,7 +269,7 @@ console.log("🛡️ Como defensor principal, " + aliado + " fortalece a resist�
 vidaMaxima += 30;
 } else { // Demais aliados - Especialistas
 console.log("🏹 Como especialista, " + aliado + " aprimora táticas de combate!");
-experiencia += 40;
+xp += 40;
 }
 }
 
@@ -283,7 +283,7 @@ console.log("🐉 CAPÍTULO 4: Confronto com as Criaturas do Castelo");
 let inimigosBatalha = ["Guardião dos Cristal", "Senhor dos baus", "Dragão das masmorras"];
 let danoRecebido = [];
 
-console.log("💀 " + nomePersonagem + " enfrenta " + inimigosBatalha.length + " inimigos épicos!");
+console.log("💀 " + nome + " enfrenta " + inimigosBatalha.length + " inimigos épicos!");
 
 // Batalha usando for tradicional para controle preciso
 for (let i = 0; i < inimigosBatalha.length; i++) {
@@ -291,7 +291,7 @@ let inimigo = inimigosBatalha[i];
 let dano = Math.floor(Math.random() * 30) + 10; // Dano entre 10 e 39
 
 console.log("⚔️ Rodada " + (i + 1) + " - Enfrentando: " + inimigo);
-console.log("💥 " + nomePersonagem + " causa " + dano + " de dano!");
+console.log("💥 " + nome + " causa " + dano + " de dano!");
 
 danoRecebido.push(dano); // Armazena dano para cálculos posteriores
 
@@ -301,10 +301,10 @@ console.log("💎 Primeira vitória! Cristais fragmentados concedem bônus!");
 tesouroColetado.push("Fragmento de Cristal");
 } else if (i === 1) {
 console.log("🌑 Segunda batalha! As sombras drenam energia, mas resisto!");
-vidaAtual -= 15;
+vida -= 15;
 } else {
 console.log("🔥 Batalha final! O dragão recua! Vitória épica alcançada!");
-experiencia += 100;
+xp += 100;
 tesouroColetado.push("Escama Dragônica");
 }
 }
@@ -321,28 +321,35 @@ console.log("🏆 Tesouros coletados: " + tesouroColetado.length + " itens épic
 
 // === EPÍLOGO: O MESTRE DOS ARRAYS ===
 console.log("");
-console.log("👑 === EPÍLOGO: " + nomePersonagem + " - CONQUISTADOR DO CASTELO ===");
+console.log("👑 === EPÍLOGO: " + nome + " - CONQUISTADOR DO CASTELO ===");
 
 // Estatísticas finais da jornada
 console.log("📈 Estatísticas Finais da Aventura:");
 console.log("• Nível alcançado: " + nivel);
-console.log("• Experiência total: " + experiencia);
-console.log("• Vida restante: " + vidaAtual + "/" + vidaMaxima);
+console.log("• Experiência total: " + xp);
+console.log("• Vida restante: " + vida + "/" + vidaMaxima);
 console.log("• Ouro acumulado: " + ouro);
 console.log("• Itens no inventário: " + inventario.length);
 console.log("• Aliados conquistados: " + aliados.length);
 console.log("• Tesouros épicos: " + tesouroColetado.length);
 
-// === ADICIONE SUAS 10+ LINHAS ÉPICAS DE CONTINUAÇÃO AQUI ===
+// === 10 LINHAS ÉPICAS DE CONTINUAÇÃO ===
 console.log("");
 console.log("🌟 A LENDA CONTINUA...");
 console.log("Após conquistar o Castelo dos cristais, emergo transformado.");
-
+console.log("Vejo o sol amarelo novamente, e sinto a brisa do vento");
+console.log("Respiro aliviada pela vitória e sigo em direção a minha cidade");
+console.log("Passo pela a aldeia dos excluidos e sou recebida com festa de comemoração pela minha vitória e libertação deles");
+console.log("Depois de aproveitar a festa vou embora com meus aliados");
+console.log("Chegamos em nossa cidade e não vemos ninguém, só o barulho das árvores balançando com o vento");
+console.log("Casas destruidas e pessoas desaparecidas, o que aconteceu?");
+console.log("E percebemos que temos mais um problema para resolver, um bebê sozinho chorando, porque só ele ficou?")
+console.log("Nossa missão não acaba aqui!")
 
 console.log("");
 console.log("🎯 FIM DO NÍVEL 3 | AGUARDE FUTURAS AVENTURAS NA ACADEMIA DOS CÓDIGOS! 🎯");
 
-/ EXEMPLO DE DESAFIO EXTRA: Sistema de Raridade
+// EXEMPLO DE DESAFIO EXTRA: Sistema de Raridade
 let itensRaros = [];
 let itensComuns = [];
                         
